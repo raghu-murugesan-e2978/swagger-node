@@ -15,7 +15,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/harish-ramesh/swagger-node.git"
+    "url": "https://github.com/harish-ramesh/swagger-node.git#schema_seggregation"
   },
   "dependencies": {
     "async": "^2.1.4",
@@ -31,7 +31,7 @@
     "serve-static": "^1.9.2",
     "swagger-converter": "^1.4.1",
     "swagger-editor": "^2.9.2",
-    "swagger-test-templates": "git+https://github.com/harish-ramesh/swagger-test-templates.git",
+    "swagger-test-templates": "git+https://github.com/harish-ramesh/swagger-test-templates.git#schema_seggregation",
     "swagger-tools": "^0.10.1"
   },
   "devDependencies": {
