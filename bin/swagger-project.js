@@ -80,5 +80,12 @@ app
   .option('-n, --lang <language>', 'one of: ' + lang)
   .action(execute(project.generateTest));
 
+app
+  .command('generate-schema [directory]')
+  .description('Generate the schema template')
+  .option('-f, --test-module <module>', 'one of: ' + testmodules)
+  .option('-n, --lang <language>', 'one of: ' + lang)
+  .action(execute(project.generateSchema));
+
 app.parse(process.argv);
 cli.validate(app);
