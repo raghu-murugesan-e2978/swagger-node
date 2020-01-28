@@ -87,5 +87,11 @@ app
   .option('-n, --lang <language>', 'one of: ' + lang)
   .action(execute(project.generateSchema));
 
+app
+  .command('generate-httpclient [directory]')
+  .description('Generate the schema template')
+  .option('-n, --lang <language>', 'one of: ' + lang)
+  .action(execute(project.libClientGen));
+
 app.parse(process.argv);
 cli.validate(app);
