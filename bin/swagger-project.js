@@ -93,5 +93,11 @@ app
   .option('-n, --lang <language>', 'one of: ' + lang)
   .action(execute(project.libClientGen));
 
+app
+  .command('generate-public-client [directory]')
+  .description('Generate the schema template')
+  .option('-n, --lang <language>', 'one of: ' + lang)
+  .action(execute(project.pubClientGen));
+
 app.parse(process.argv);
 cli.validate(app);
