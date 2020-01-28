@@ -89,15 +89,21 @@ app
 
 app
   .command('generate-httpclient [directory]')
-  .description('Generate the schema template')
+  .description('Generate the library client')
   .option('-n, --lang <language>', 'one of: ' + lang)
   .action(execute(project.libClientGen));
 
 app
   .command('generate-public-client [directory]')
-  .description('Generate the schema template')
+  .description('Generate the public client files')
   .option('-n, --lang <language>', 'one of: ' + lang)
   .action(execute(project.pubClientGen));
+
+app
+  .command('generate-private-client [directory]')
+  .description('Generate the private client files')
+  .option('-n, --lang <language>', 'one of: ' + lang)
+  .action(execute(project.privateClientGen));
 
 app.parse(process.argv);
 cli.validate(app);
