@@ -105,5 +105,11 @@ app
   .option('-n, --lang <language>', 'one of: ' + lang)
   .action(execute(project.privateClientGen));
 
+app
+  .command('generate-client [directory]')
+  .description('Generate the client files')
+  .option('-n, --lang <language>', 'one of: ' + lang)
+  .action(execute(project.clientGen));
+
 app.parse(process.argv);
 cli.validate(app);
