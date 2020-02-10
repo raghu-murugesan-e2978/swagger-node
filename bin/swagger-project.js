@@ -100,12 +100,6 @@ app
   .action(execute(project.pubClientGen));
 
 app
-  .command('generate-private-client [directory]')
-  .description('Generate the private client files')
-  .option('-n, --lang <language>', 'one of: ' + lang)
-  .action(execute(project.privateClientGen));
-
-app
   .command('generate-client [directory]')
   .description('Generate the client files')
   .option('-n, --lang <language>', 'one of: ' + lang)
