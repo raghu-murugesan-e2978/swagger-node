@@ -24,6 +24,7 @@ var frameworks = Object.keys(project.frameworks).join('|');
 var assertiontypes = project.assertiontypes.join('|');
 var testmodules = project.testmodules.join('|');
 var lang = project.lang.join('|');
+var client_opts = project.client_opts.join('|');
 
 app
   .command('create [name]')
@@ -88,21 +89,10 @@ app
   .action(execute(project.generateSchema));
 
 app
-  .command('generate-httpclient [directory]')
+  .command('generate-client [directory]')
   .description('Generate the library client')
   .option('-n, --lang <language>', 'one of: ' + lang)
-  .action(execute(project.libClientGen));
-
-app
-  .command('generate-public-client [directory]')
-  .description('Generate the public client files')
-  .option('-n, --lang <language>', 'one of: ' + lang)
-  .action(execute(project.pubClientGen));
-
-app
-  .command('generate-client [directory]')
-  .description('Generate the client files')
-  .option('-n, --lang <language>', 'one of: ' + lang)
+  .option('-c, --client <client_opts>', 'one of: ' + client_opts)
   .action(execute(project.clientGen));
 
 app.parse(process.argv);
