@@ -31,7 +31,7 @@
     "serve-static": "^1.9.2",
     "swagger-converter": "^1.4.1",
     "swagger-editor": "^2.9.2",
-    "swagger-test-templates": "git+https://github.com/harish-ramesh/swagger-test-templates.git#marketplace",
+    "swagger-test-templates": "git+https://github.com/raghu-murugesan-e2978/swagger-test-templates.git#marketplace",
     "swagger-tools": "^0.10.1"
   },
   "devDependencies": {
